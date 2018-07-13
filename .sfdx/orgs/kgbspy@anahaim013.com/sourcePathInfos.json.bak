@@ -1,0 +1,152 @@
+[
+    [
+        "D:\\SFDX_TEST\\dx_test\\i2max_app",
+        {
+            "state": "u",
+            "sourcePath": "D:\\SFDX_TEST\\dx_test\\i2max_app",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1531207392116,
+            "changeTime": 1531207392116,
+            "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "D:\\SFDX_TEST\\dx_test\\i2max_app\\main",
+        {
+            "state": "u",
+            "sourcePath": "D:\\SFDX_TEST\\dx_test\\i2max_app\\main",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1531207392116,
+            "changeTime": 1531207392116,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default",
+        {
+            "state": "u",
+            "sourcePath": "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1531376715199,
+            "changeTime": 1531376715199,
+            "contentHash": "78dd78c06e81fd7afb457ecdb5af8fae5546e0a3",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\aura",
+        {
+            "state": "u",
+            "sourcePath": "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\aura",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1531207392116,
+            "changeTime": 1531207392116,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\classes",
+        {
+            "state": "u",
+            "sourcePath": "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\classes",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1531376998840,
+            "changeTime": 1531376998840,
+            "contentHash": "6f26904cdd3343d920771f0aad8db2d40e48e8b0",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\classes\\I2MAXDataSourceConnection.cls",
+        {
+            "state": "u",
+            "sourcePath": "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\classes\\I2MAXDataSourceConnection.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 6970,
+            "modifiedTime": 1531377058064,
+            "changeTime": 1531377058064,
+            "contentHash": "5f641147912802984642f0e8212ca0189456f39f",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\classes\\I2MAXDataSourceConnection.cls-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\classes\\I2MAXDataSourceConnection.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 203,
+            "modifiedTime": 1531376770482,
+            "changeTime": 1531376770482,
+            "contentHash": "1cca5b5271ce718ecefbb349dbc780448dccf5b6",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\classes\\I2MAXDataSourceProvider.cls",
+        {
+            "state": "u",
+            "sourcePath": "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\classes\\I2MAXDataSourceProvider.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 836,
+            "modifiedTime": 1531377034605,
+            "changeTime": 1531377034605,
+            "contentHash": "c9904421a7008308962dbe7847883def951b2762",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\classes\\I2MAXDataSourceProvider.cls-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "D:\\SFDX_TEST\\dx_test\\i2max_app\\main\\default\\classes\\I2MAXDataSourceProvider.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 201,
+            "modifiedTime": 1531376998846,
+            "changeTime": 1531376998846,
+            "contentHash": "4681c8762eedf049b61d6c5e7a226dd609c273fa",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\SFDX_TEST\\dx_test",
+        {
+            "state": "u",
+            "sourcePath": "D:\\SFDX_TEST\\dx_test",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1531376938945,
+            "changeTime": 1531376938945,
+            "contentHash": "50dc5921fff9f79d9f9bec48fe4b4d084f99ed75",
+            "isWorkspace": true,
+            "isArtifactRoot": false
+        }
+    ]
+]
