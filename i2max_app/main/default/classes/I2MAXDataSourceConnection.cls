@@ -9,8 +9,7 @@ global class I2MAXDataSourceConnection extends DataSource.Connection {
     override global DataSource.TableResult query(DataSource.QueryContext context) {
         List<Map<String, Object>> rows = null;
         if( null == context )
-           return null;
-   
+           return null; 
         try 
         {
            
@@ -69,7 +68,7 @@ global class I2MAXDataSourceConnection extends DataSource.Connection {
             for (Integer i =0;i< context.tableSelections.size();i++) {
                 String entity = context.tableSelections[i].tableSelected;
                 // Search usernames
-                String url = 'http://example.com/example/test' + context.searchPhrase;
+                String url = 'https://leemfirst.herokuapp.com/testSearch.do?' + context.searchPhrase;
                 results.add(DataSource.TableResult.get(true, null, entity, getData(url)));
             } 
         } catch(exception e) {
