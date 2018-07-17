@@ -21,11 +21,11 @@ node {
     withCredentials([file(credentialsId: JWT_KEY_CRED_ID, variable: 'jwt_key_file')]) {
         stage('Create Scratch Org') {
          echo "\"${toolbelt}/sfdx.cmd\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile D:/SFDX_TEST/dx_cert/server.key --setdefaultdevhubusername --instanceurl ${SFDC_HOST}" 
-            rc = sh returnStatus: true, script: "\"${toolbelt}/sfdx.cmd\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile D:/SFDX_TEST/dx_cert/server.key --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
+            rc = bat returnStatus: true, script: "\"${toolbelt}/sfdx.cmd\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile D:/SFDX_TEST/dx_cert/server.key --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
             if (rc != 0) { error 'hub org authorization failed' }
 
             // need to pull out assigned username
-            rmsg = sh returnStdout: true, script: "\"${toolbelt}/sfdx.cmd\" force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername"
+            rmsg = bat returnStdout: true, script: "\"${toolbelt}/sfdx.cmd\" force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername"
             printf rmsg
             def jsonSlurper = new JsonSlurperClassic()
             def robj = jsonSlurper.parseText(rmsg)
