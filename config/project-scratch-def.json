@@ -1,5 +1,5 @@
 {
-    "orgName": "Demo Company",
+    "orgName": "I2MAX",
     "edition": "Developer",
     "orgPreferences" : {
         "enabled": ["S1DesktopEnabled", "ChatterEnabled"] 
