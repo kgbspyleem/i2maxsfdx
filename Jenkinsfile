@@ -26,9 +26,9 @@ node {
             if (rc != 0) { error 'hub org authorization failed' }
  
             // need to pull out assigned username
-            String  rmsg = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername"
+            String  rmsg = bat (returnStdout: true, script: "\"${toolbelt}/sfdx\" force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername")
           
-            printf rmsg
+            println("stdout ################ " + rmsg + " ####################")
             echo rmsg
 
             def values = rmsg.split('\r')
@@ -36,7 +36,7 @@ node {
 
 
             def jsonSlurper = new JsonSlurper()
-            def robj = jsonSlurper.parseText(  values[1] );
+            def robj = jsonSlurper.parseText(  values[2] );
             if (robj.status != "ok") { error 'org creation failed: ' + robj.message }
             SFDC_USERNAME=robj.username
        
