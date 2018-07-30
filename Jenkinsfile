@@ -28,9 +28,8 @@ node {
             // need to pull out assigned username
             String  rmsg = bat (returnStdout: true, script: "\"${toolbelt}/sfdx\" force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername")
           
-            println("stdout ################ " + rmsg + " ####################")
-            echo rmsg
-
+            println("stdout ################ " + rmsg + " ####################") 
+            
             String values[] = rmsg.split('\r')
 
             println("values ################ " +  values.length() + " ####################")
