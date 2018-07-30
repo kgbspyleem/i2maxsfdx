@@ -30,20 +30,13 @@ node {
           
             println("stdout ################ " + rmsg + " ####################") 
             
-            String[] values = rmsg.split('\r')
-
-            println("values.last() ################ " + values.last()   + " ####################")
- 
-
-
+            String[] values = rmsg.split('\r') 
 
             def jsonSlurper = new JsonSlurper()
             def robj = jsonSlurper.parseText(  values.last() );
-            if (robj.status != "ok") { error 'org creation failed: ' + robj.message }
-            SFDC_USERNAME=robj.username
-       
-            robj = null
-
+            if (robj.status != 0 ) { error 'org creation failed: ' + robj.message }
+            SFDC_USERNAME=robj.username 
+            robj = null 
         }
 
         stage('Push To Test Org') {
