@@ -48,16 +48,18 @@ node {
                 error 'push failed'
             }
             // assign permset
-            rc = bat returnStatus: true, script: "\"${toolbelt}/sfdx\" force:user:permset:assign --targetusername ${SFDC_USERNAME} --permsetname DreamHouse"
+            rc = bat returnStatus: true, script: "\"${toolbelt}/sfdx\" force:user:permset:assign --targetusername ${SFDC_USERNAME} --permsetname test_dx"
             if (rc != 0) {
                 error 'permset:assign failed'
             }
         }
 
         stage('Run Apex Test') {
-            bat "mkdir -p ${RUN_ARTIFACT_DIR}"
+            String RUN_ARTIFACT_DIRS = "${RUN_ARTIFACT_DIR}".replace("/","\\") 
+            bat "mkdir " + RUN_ARTIFACT_DIRS 
+
             timeout(time: 120, unit: 'SECONDS') {
-                rc = bat returnStatus: true, script: "\"${toolbelt}/sfdx\" force:apex:test:run --testlevel RunLocalTests --outputdir ${RUN_ARTIFACT_DIR} --resultformat tap --targetusername ${SFDC_USERNAME}"
+                rc = bat returnStatus: true, script: "\"${toolbelt}/sfdx\" force:apex:test:run --testlevel RunLocalTests --outputdir " + RUN_ARTIFACT_DIRS  + "  --resultformat tap --targetusername ${SFDC_USERNAME}"
                 if (rc != 0) {
                     error 'apex test run failed'
                 }
