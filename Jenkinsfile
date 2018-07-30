@@ -33,7 +33,7 @@ node {
 
             def values = rmsg.split('\r')
 
-
+            println("values ################ " +  values.size + " ####################")
 
             def jsonSlurper = new JsonSlurper()
             def robj = jsonSlurper.parseText(  values[2] );
