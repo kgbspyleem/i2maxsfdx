@@ -30,9 +30,9 @@ node {
           
             println("stdout ################ " + rmsg + " ####################") 
             
-            String values[] = rmsg.split('\r')
+            String[] values = rmsg.split('\r')
 
-            println("values ################ " +  values.length() + " ####################")
+            println("values ################ " +  values.length + " ####################")
 
             def jsonSlurper = new JsonSlurper()
             def robj = jsonSlurper.parseText(  values[2] );
