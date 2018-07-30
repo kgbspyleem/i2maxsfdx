@@ -35,7 +35,10 @@ node {
             def jsonSlurper = new JsonSlurper()
             def robj = jsonSlurper.parseText(  values.last() );
             if (robj.status != 0 ) { error 'org creation failed: ' + robj.message }
-            SFDC_USERNAME=robj.username 
+            SFDC_USERNAME=robj.result.username 
+            
+            println("SFDC_USERNAME ################ " + robj.result.username  + " ####################") 
+
             robj = null 
         }
 
