@@ -30,8 +30,13 @@ node {
           
             printf rmsg
             echo rmsg
+
+            def values = rmsg.split('\\r|\\n')
+
+
+
             def jsonSlurper = new JsonSlurper()
-            def robj = jsonSlurper.parseText( rmsg.replaceAll('\\r|\\n', '') );
+            def robj = jsonSlurper.parseText(  values[1] );
             if (robj.status != "ok") { error 'org creation failed: ' + robj.message }
             SFDC_USERNAME=robj.username
        
