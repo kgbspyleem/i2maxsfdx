@@ -1,5 +1,5 @@
 #!groovy
-import groovy.json.JsonSlurperClassic
+import groovy.json.JsonSlurper
 node {
 
     def BUILD_NUMBER=env.BUILD_NUMBER
@@ -26,11 +26,11 @@ node {
             if (rc != 0) { error 'hub org authorization failed' }
  
             // need to pull out assigned username
-           rmsg = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername"
+            rmsg = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername"
           
-           printf rmsg
-           echo rmsg
-           def jsonSlurper = new JsonSlurperClassic()
+            printf rmsg
+            echo rmsg
+            def jsonSlurper = new JsonSlurper()
             def robj = jsonSlurper.parseText(rmsg)
             if (robj.status != "ok") { error 'org creation failed: ' + robj.message }
             SFDC_USERNAME=robj.username
