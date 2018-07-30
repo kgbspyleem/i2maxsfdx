@@ -31,7 +31,7 @@ node {
             printf rmsg
             echo rmsg
 
-            def values = rmsg.split('\\r|\\n')
+            def values = rmsg.split('\r')
 
 
 
