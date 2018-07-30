@@ -3,13 +3,13 @@
 private class Sample_Test {  
     @isTest static void getAuthenticationCapabilities(){ 
 
-        SampleDataSourceProvider  sampleProvider = new SampleDataSourceProvider();  
+        I2MAXDataSourceProvider  sampleProvider = new I2MAXDataSourceProvider();  
         sampleProvider.getAuthenticationCapabilities();  
     }
 
 
     @isTest static void getCapabilities(){  
-        SampleDataSourceProvider  sampleProvider = new SampleDataSourceProvider();  
+        I2MAXDataSourceProvider  sampleProvider = new I2MAXDataSourceProvider();  
         sampleProvider.getCapabilities(); 
     } 
 
@@ -18,13 +18,13 @@ private class Sample_Test {
         MockHttpResponseGenerator  fakeResponse = new MockHttpResponseGenerator( ); 
         Test.setMock(HttpCalloutMock.class,  fakeResponse);
 
-        SampleDataSourceProvider  sampleProvider = new SampleDataSourceProvider();  
+        I2MAXDataSourceProvider  sampleProvider = new I2MAXDataSourceProvider();  
         DataSource.ConnectionParams connectionParams = new  DataSource.ConnectionParams (); 
-        SampleDataSourceConnection testConn  =(SampleDataSourceConnection) sampleProvider.getConnection(connectionParams);    
+        I2MAXDataSourceConnection testConn  =(I2MAXDataSourceConnection) sampleProvider.getConnection(connectionParams);    
         DataSource.QueryContext qeuryContext = new  DataSource.QueryContext (); 
         DataSource.SearchContext searchContext = new  DataSource.SearchContext ();
         DataSource.TableSelection tblSel1 =  new DataSource.TableSelection();
-         DataSource.TableSelection tblSel2=  new DataSource.TableSelection();
+        DataSource.TableSelection tblSel2=  new DataSource.TableSelection();
         Map<String, Object> item = new  Map<String, Object> ();
  
         item.put('test', 'test'); 
