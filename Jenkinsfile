@@ -32,16 +32,13 @@ node {
             
             String[] values = rmsg.split('\r')
 
-            println("values 0 ################ " + values[0]  + " ####################")
-
-            println("values 1 ################ " + values[1]  + " ####################")
-            
-            println("values 2 ################ " + values[2]  + " ####################")
+            println("values.last() ################ " + values.last()   + " ####################")
+ 
 
 
 
             def jsonSlurper = new JsonSlurper()
-            def robj = jsonSlurper.parseText(  values[2] );
+            def robj = jsonSlurper.parseText(  values.last() );
             if (robj.status != "ok") { error 'org creation failed: ' + robj.message }
             SFDC_USERNAME=robj.username
        
